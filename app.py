@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homePage():
-    # add_product()
+    # add_product() 
     get_product()
     return render_template('homePage.html')
 
