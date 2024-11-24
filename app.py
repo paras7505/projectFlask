@@ -6,7 +6,7 @@ from database import session
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/') 
 def homePage():
     # add_product() 
     get_product()
