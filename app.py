@@ -13,15 +13,15 @@ def homePage():
     return render_template('homePage.html')
 
 
-@app.route('/hello/')
+@app.route('/hello/') 
 @app.route('/hello/<name>/')
 def greet(name=None):
     return render_template('greet.html' , name = name)
 
 
-@app.get('/product/')
-def details():
-    return render_template("products.html",)
+# @app.get('/product/')
+# def details():
+#     return render_template("products.html")
 
 #  for post method
 @app.post('/form/')
@@ -30,7 +30,7 @@ def form_details():
     lastName = request.form['lname']
     print(request.form)    
     return f"<h1> user details in post method {firstName} {lastName} </h1>"
-             
+
 #  using if else 
 @app.route('/ifelse/', methods=['POST', 'GET'])
 def forms():
